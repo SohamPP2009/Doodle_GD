@@ -1,0 +1,634 @@
+
+body {
+  --sb-track-color: #000000;
+  --sb-thumb-color: #1318ff;
+  --sb-size: 10px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 23px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 23px;
+  border: 3px solid #17f997;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
+.column{
+    height: 100px;
+    width: 50%;
+    display: block;
+    position: fixed;
+    cursor: pointer;
+}
+#name{
+    font-size: 50px;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    color: white;
+}
+#wel{
+    font-family: "Lugrasimo", cursive;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+    position: fixed;   
+}
+#wel:hover{
+  color: rgb(212, 208, 208);
+}
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+
+}
+#msg{
+    width: 50%;
+    height: 40px;
+    bottom: 0;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    border: none;
+    padding-left: 15px;
+
+    background:
+    linear-gradient(
+      to right,
+      transparent 20%,
+      rgb(0, 0, 255) 20%,
+      rgb(0, 8, 165) 80%,
+      transparent 80%
+    ) bottom no-repeat,
+    linear-gradient(
+      to top,
+      turquoise 0%,
+      turquoise 300%
+    ) right 300% no-repeat,
+    linear-gradient(
+      to right,
+      turquoise 0%,
+      turquoise 100%
+    )   00% 0 no-repeat,
+    linear-gradient(
+      to top,
+      turquoise 0%,
+      turquoise 300%
+    ) left 00% no-repeat
+    ;  
+  transition:background-size 3s ease-in;
+}
+.line{
+  outline: none;
+}
+
+#msg,canvas{
+  background-size: 
+    100% 8px, 
+    3px 0, 
+    3px 3px, 
+    3px 0;
+
+}
+#msg:hover,canvas:hover{
+  background-size: 
+    200% 3px , 
+    3px 100%, 
+    100% 3px, 
+    3px 100%;
+  transition:background-size 2s ease-in-out;
+}
+
+#msg:focus{
+  outline-color: transparent;
+  border: 2px solid black;
+}
+::-ms-input-placeholder { /* Edge 12-18 */
+  color: rgb(251, 246, 246);
+}
+
+::placeholder {
+  color: rgb(247, 245, 245);
+}
+
+#in{
+  width: 50%;
+  height: 40px;
+  bottom: 0;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+  border: none;
+  padding-left: 15px;
+
+  background:
+  linear-gradient(
+    to right,
+    transparent 20%,
+    rgb(0, 0, 255) 20%,
+    rgb(0, 8, 165) 80%,
+    transparent 80%
+  ) bottom no-repeat,
+  linear-gradient(
+    to top,
+    turquoise 0%,
+    turquoise 300%
+  ) right 300% no-repeat,
+  linear-gradient(
+    to right,
+    turquoise 0%,
+    turquoise 100%
+  )   00% 0 no-repeat,
+  linear-gradient(
+    to top,
+    turquoise 0%,
+    turquoise 300%
+  ) left 00% no-repeat
+  ;  
+transition:background-size 3s ease-in;
+}
+.line{
+outline: none;
+}
+
+#in,canvas{
+background-size: 
+  100% 8px, 
+  3px 0, 
+  3px 3px, 
+  3px 0;
+
+}
+#in:hover,canvas:hover{
+background-size: 
+  200% 3px , 
+  3px 100%, 
+  100% 3px, 
+  3px 100%;
+transition:background-size 2s ease-in-out;
+}
+
+#in:focus{
+outline-color: transparent;
+border: 2px solid black;
+}
+::-ms-input-placeholder { /* Edge 12-18 */
+color: rgb(251, 246, 246);
+}
+
+::placeholder {
+color: rgb(247, 245, 245);
+}
+
+
+
+
+
+
+
+#inboxx{
+  width: 50%;
+  height: 40px;
+  bottom: 0;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+  border: none;
+  padding-left: 15px;
+  display: none;
+
+  background:
+  linear-gradient(
+    to right,
+    transparent 20%,
+    rgb(0, 0, 255) 20%,
+    rgb(0, 8, 165) 80%,
+    transparent 80%
+  ) bottom no-repeat,
+  linear-gradient(
+    to top,
+    turquoise 0%,
+    turquoise 300%
+  ) right 300% no-repeat,
+  linear-gradient(
+    to right,
+    turquoise 0%,
+    turquoise 100%
+  )   00% 0 no-repeat,
+  linear-gradient(
+    to top,
+    turquoise 0%,
+    turquoise 300%
+  ) left 00% no-repeat
+  ;  
+transition:background-size 3s ease-in;
+}
+#inboxx{
+  background-size: 
+    100% 8px, 
+    3px 0, 
+    3px 3px, 
+    3px 0;
+
+}
+#inboxx:hover{
+  background-size: 
+    200% 3px , 
+    3px 100%, 
+    100% 3px, 
+    3px 100%;
+  transition:background-size 2s ease-in-out;
+}
+
+#inboxx:focus{
+  outline-color: transparent;
+  border: 2px solid black;
+}
+::-ms-input-placeholder { /* Edge 12-18 */
+  color: rgb(251, 246, 246);
+}
+
+
+
+
+  
+  
+
+
+
+
+
+
+#log{
+    float: right;
+    margin-top: px;
+    margin-right: 10px;
+    height: 50px;
+    border: black;
+    font-size: 25px;
+    cursor: pointer;
+}
+#log{
+    background: transparent;
+    border: black;
+    
+}
+#send{
+    background: transparent;
+    border: none;
+}
+#sends{
+  background: transparent;
+  border: none;
+}
+#sendd{
+  background: transparent;
+  border: none;
+}
+#sends{
+background: transparent;
+border: none;
+}
+#btt{
+  display: none;
+}
+
+#clearr{
+  margin-top: 610px;
+  float: right;
+  position: fixed;
+  margin-left: 1255px;
+  height: 50px;
+  width: 100px;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: rgb(11, 11, 11);
+  border: 2px solid aquamarine;
+  
+  
+}
+#clearr:hover{
+  background-color: aquamarine;
+  transition: 2s ease-in-out;
+  color: black;
+  }
+.main-div{
+  height: 50px;
+  width: 100px;
+  overflow: auto;
+  border: 2px solid white;
+}
+
+#chat{
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  
+}
+
+
+
+
+
+header {
+  text-align: center;
+  font-style: italic;
+  padding: 10px;
+}
+
+#messages{
+  padding-bottom: 30%;
+  
+}
+
+li {
+  list-style-type: none;
+  margin-bottom: 25px;
+  background-color: rgb(14, 12, 12);
+  padding: 5px;
+  color: rgb(255, 255, 255);
+  width: 30%;
+  padding-left: 20px;
+  font-size: 20px;
+  border: 1px solid white;
+  
+}
+.receive{
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 50px;
+
+}
+
+li span {
+  font-style: italic;
+  font-weight: bolder;
+  color: rgb(253, 252, 252);
+  margin-right: 20px;
+}
+
+#chat {
+  width: 1100px;
+  margin: auto;
+  padding: 10px;
+  background-color: black;
+  background: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 0;
+  float: right;
+  margin-top: 70px;
+  height: 600px;
+}
+.work_space{
+  width: 1100px;
+  margin: auto;
+  padding: 10px;
+  background-color: rgba(21, 20, 20, 0.527);
+  box-shadow: inset 0 0 40px rgb(65, 61, 61);
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 0;
+  float: right;
+  margin-top: 60px;
+  height: 580px;
+  display: none;
+  margin-right: 78px;
+  border: 2px solid rgba(251, 250, 250, 0.385);
+  border-bottom-right-radius: 60px;
+  border-top-left-radius: 30px;
+}
+.work_saved{
+  width: 1100px;
+  margin: auto;
+  padding: 10px;
+  background-color: rgba(54, 54, 54, 0.527);
+  box-shadow: inset 0 0 5px rgb(238, 235, 235);
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 0;
+  float: right;
+  margin-top: 60px;
+  height: 580px;
+  display: none;
+  margin-right: 10px;
+  border: 2px solid rgb(249, 248, 248);
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 30px;
+}
+.Trash{
+  width: 1275px;
+  margin: auto;
+  padding: 10px;
+  background-color: rgba(30, 27, 27, 0.493);
+  box-shadow: inset 0 0 10px rgb(5, 82, 236);
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 0;
+  float: right;
+  margin-top: 60px;
+  height: 580px;
+  display: none;
+  margin-right: 10px;
+  border: 2px solid rgb(8, 8, 248);
+ 
+}
+
+
+#message-form {
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #b7b5b9;
+}
+#message-for {
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #b7b5b9;
+}
+
+
+.sent {
+  text-align: left;
+  background-color: rgb(173, 209, 173);
+  margin-left: 66%;
+  width: 30%;
+  padding-right: 10px;
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 50px;
+}
+
+.sent span {
+  margin-left: 5px;
+  color: black;
+}
+.sent{
+  color: black;
+}
+.sentt {
+  text-align: left;
+  background-color: rgb(173, 209, 173);
+  margin-left: 66%;
+  width: 30%;
+  padding-right: 10px;
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 50px;
+}
+
+.sentt span {
+  margin-left: 5px;
+  color: black;
+}
+.sentt{
+  color: black;
+}
+
+
+
+
+
+#myDiv {
+  text-align: center;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-color: lightblue;
+  background: transparent;
+  transform: translate(-50%,-50%);
+  position: fixed;
+  backdrop-filter: blur(10px);
+  transition: opacity 0.5s ease-in-out;
+  
+  
+}
+#myDiv{
+  position: absolute;
+  padding: 10px;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  float: left;
+  
+}
+.divv{
+  margin-top: 300px;
+  font-family: "Lugrasimo", cursive;
+  font-weight: 500;
+  font-style: normal;
+  color: rgb(252, 250, 250);
+  font-size: 200px;
+  background: linear-gradient(to right, #f93504, #0703f8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.col{
+  height: 700px;
+  width: 130px;
+  margin-top: 80px;
+  position: fixed;
+  color: white;
+  background-color: rgba(31, 31, 31, 0.508);
+
+}
+
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background:transparent;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+
+.h:hover {
+  color: #cbc9c9;
+}
+
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+.closebtn{
+  margin-top: 75px;
+  color: white;
+}
+.h{
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgb(255, 253, 253);
+  display: block;
+  transition: 0.3s;
+  cursor: pointer;
+}
+#ih{
+  margin-top: 270px;
+  font-weight: bold;
+}
+#ih:hover{
+  color: rgb(251, 47, 1);
+}
+
+.sample{
+ height: 50px;
+ width: 100%;
+  display: flex;
+}
+.hl{
+  padding-left: 10px;
+  top: 0;
+  bottom: 2px;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
